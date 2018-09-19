@@ -6,10 +6,11 @@ use Classes\File;
 use Classes\FilesUpload;
 use Classes\FilesCommon;
 
+
 class IndexController extends Controller {
 
     public function initialize() {
-        
+        $this->session->set('idUser',4);
     }
 
     public function indexAction() {
