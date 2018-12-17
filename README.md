@@ -2,7 +2,7 @@
 
 
 
-## Files handling with:
+## Files handling:
 * Protection from too large size and inappropriate extensions
 * Encoded files and folder names
 * Checking access to the file
