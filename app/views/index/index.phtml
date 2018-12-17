@@ -1,19 +1,6 @@
 <form method="post" enctype="multipart/form-data" />
 <p><?php $this->flashSession->output() ?></p>
-<input name="work" />
 <input type="file" name="file"/>
 <input type="submit" value="submit"/>
 <form>
     
-<?php
-    foreach($files as $file){
-        ?>
-    <p><?= $file->filePath;?></p>
-    <p><?= $file->fileUri;?></p>
-    <p><?= $file->fileName;?></p>
-            
-       <?php     
-    }
-?>
-    <img src="/file/get/da39a3ee5e6b4b0d3255bfef95601890afd80709-75e1bd5edf9a278ddf04d1cf7195ea1122b417fb" />
-    <img src="public/data/da39a3ee5e6b4b0d3255bfef95601890afd80709/75e1bd5edf9a278ddf04d1cf7195ea1122b417fb.png2" />
