@@ -7,10 +7,10 @@ use Classes\FilesUpload;
 use Classes\FilesCommon;
 
 
-class IndexController extends Controller {
+class IndexController extends BaseController {
 
     public function initialize() {
-        $this->session->set('idUser',4);
+        parent::initialize();
     }
 
     public function indexAction() {
@@ -21,6 +21,13 @@ class IndexController extends Controller {
                 $this->view->file = $file;
             } 
        }
+       $files = SiteFiles::find([
+           'userCreated = :user:',
+           'bind'=>[
+               'user'=>$this->session->get('idUser'),
+           ]
+       ]);
+       $this->view->files = $files;
     }
 
 }
